@@ -1450,28 +1450,45 @@ img {
 }
 
 /* -----------------------------------------------
-  Main > Hero
+  Main > Master
 -------------------------------------------------*/
-section.hero {
+section {
   padding: 100px 0;
+  overflow-x: hidden;
 }
-section.hero .title {
+.title.master {
   font-weight: 700;
-  font-size: 50px;
+  font-size: 42px;
   line-height: 1.5;
-  text-align: center;
   background: linear-gradient(64.37deg, #8a10c4 16.21%, #0a4360 83.79%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+  padding-bottom: 20px;
 }
-section.hero .sub-title {
+.title.slave {
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 1.5;
+  padding-bottom: 10px;
+}
+.sub-title.master,
+.sub-title.slave {
   font-weight: 400;
   font-size: 20px;
   line-height: 1.5;
-  text-align: center;
-  padding-top: 40px;
+}
+.out-view {
+  width: 150%;
+  max-width: unset;
+}
+/* -----------------------------------------------
+  Main > Hero
+-------------------------------------------------*/
+section.hero .title.master {
+  padding-bottom: 40px;
+  font-size: 54px;
 }
 section.hero .create-store-emailForm {
   display: flex;
@@ -1504,6 +1521,87 @@ section.hero .create-store-emailForm .input span {
 }
 section.hero .video {
   padding-top: 40px;
+}
+
+/* -----------------------------------------------
+  Main > Colored cards
+-------------------------------------------------*/
+.colored.card {
+  padding: 30px;
+  border-radius: 25px;
+  border: none;
+}
+.colored.card ~ .card {
+  margin-top: 60px;
+}
+.colored.card.blue {
+  background: rgba(35, 106, 190, 0.1);
+}
+.colored.card.red {
+  background: rgba(190, 35, 35, 0.1);
+}
+.colored.card.purple {
+  background: rgba(140, 35, 190, 0.1);
+}
+
+/* -----------------------------------------------
+  Main > Master
+-------------------------------------------------*/
+.animated-features {
+}
+.animated-features .features {
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+  margin: 20px auto;
+}
+.animated-features .features .features--inner {
+  display: block;
+  width: 300%;
+  position: absolute;
+  animation: featuresLeft 20s linear infinite;
+}
+.animated-features .right .features .features--inner {
+  animation: featuresRight 20s linear infinite;
+}
+.animated-features .features .features--inner:hover {
+  animation-play-state: paused;
+}
+.animated-features .features .features--inner > span {
+  float: left;
+}
+.animated-features .right .features .features--inner > span {
+  float: right;
+}
+@keyframes featuresLeft {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+@keyframes featuresRight {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: -100%;
+  }
+}
+.animated-features .features .features--inner img {
+  width: 325px;
+  height: 100px;
+  border-radius: 8px;
+  display: inline-block;
+  margin: 0 24.7px;
+  float: left;
+  transition: all 0.2s ease-out;
+}
+.animated-features .right .features .features--inner img {
+  float: right;
 }
 
 /* #endregion */
