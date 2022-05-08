@@ -1465,7 +1465,7 @@ section {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 .title.slave {
   font-weight: 600;
@@ -1603,7 +1603,57 @@ section.hero .video {
 .animated-features .right .features .features--inner img {
   float: right;
 }
-
+.ratings {
+  margin-right: 10px;
+}
+.ratings > * {
+  color: #cecece;
+  font-size: 32px;
+}
+.rating-color {
+  color: #fbc634 !important;
+}
+.review-count {
+  font-weight: 400;
+  margin-bottom: 2px;
+  font-size: 24px !important;
+}
+.small-ratings > * {
+  color: #cecece;
+}
+.splide__track {
+  overflow: unset;
+}
+.splide__track .card {
+  overflow: hidden;
+  border-radius: 18px;
+  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.1));
+  transition: all 0.3s ease-out;
+}
+.splide__track .card:hover {
+  filter: drop-shadow(0px 10px 50px rgba(0, 0, 0, 0.25));
+  transform: scale(1.02);
+}
+.splide__track a.card {
+  text-decoration: none;
+  color: inherit;
+}
+.splide[data-holol-carousel-type='master'] .splide__arrows {
+  position: relative;
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 40px;
+}
+.splide[data-holol-carousel-type='master'] .splide__arrows > * {
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transform: translateY(0);
+  width: 3em;
+  height: 3em;
+}
 /* #endregion */
 
 /* #region / Bootstrap 5 - Customization */

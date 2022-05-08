@@ -1561,6 +1561,32 @@ var APP = (function () {
     });
   };
 
+  var initSplide = function () {
+    const splideContainer = document.querySelectorAll('[data-holol-carousel]');
+    APPUtil.each(splideContainer, (splide) => {
+      var splideEl;
+      var type = APPUtil.attr(splide, 'data-holol-carousel-type');
+      if (type === 'master')
+        splideEl = new Splide(splide, {
+          direction: 'rtl',
+          arrows: true,
+          pagination: false,
+          drag: 'free',
+          snap: true,
+          trimSpace: false,
+          gap: '3rem',
+          perPage: 3,
+          perMove: 1,
+          breakpoints: {
+            768: { perPage: 2 },
+            480: { perPage: 1 },
+          },
+        });
+      else splideEl = new Splide(splide);
+      splideEl.mount();
+    });
+  };
+
   // Public methods
   return {
     init: function () {
@@ -1573,6 +1599,7 @@ var APP = (function () {
       this.initBootstrapPopovers();
       this.initScrollSpy();
       this.initMainNav();
+      this.initSplide();
     },
 
     initHello: function (provider, version, link) {
@@ -1605,6 +1632,10 @@ var APP = (function () {
 
     initMainNav: function () {
       initMainNav();
+    },
+
+    initSplide: function () {
+      initSplide();
     },
   };
 })();
