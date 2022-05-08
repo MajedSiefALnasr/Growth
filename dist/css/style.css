@@ -1654,6 +1654,25 @@ section.hero .video {
   width: 3em;
   height: 3em;
 }
+
+.testimonial {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  gap: 40px;
+}
+.testimonial .text {
+  font-size: 24px;
+}
+.testimonial .author {
+  font-size: 18px;
+  color: #575757;
+}
+.testimonial .image {
+  max-width: 100px;
+}
 /* #endregion */
 
 /* #region / Bootstrap 5 - Customization */
