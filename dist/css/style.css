@@ -1691,6 +1691,33 @@ section.hero.footer {
   max-width: 100px;
 }
 /* -----------------------------------------------
+  Main > Download App
+-------------------------------------------------*/
+section.app {
+  padding: 180px 0;
+}
+section.app .download-app {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 70px 50px;
+  border-radius: 28px;
+  background: #fff;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.05);
+}
+
+section.app .download-app .preview {
+  position: relative;
+  width: 240px;
+}
+section.app .download-app .preview img {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+}
+
+/* -----------------------------------------------
   Main > Footer
 -------------------------------------------------*/
 footer {
