@@ -1483,6 +1483,15 @@ section {
   width: 150%;
   max-width: unset;
 }
+
+/* -----------------------------------------------
+  Main > Main Sections
+-------------------------------------------------*/
+.main-sections {
+  background-color: var(--root-bg);
+  box-shadow: 0 15px 25px #16181b;
+}
+
 /* -----------------------------------------------
   Main > Hero
 -------------------------------------------------*/
@@ -1490,12 +1499,18 @@ section.hero .title.master {
   padding-bottom: 40px;
   font-size: 54px;
 }
+section.hero.footer .title.master {
+  font-size: 42px;
+}
 section.hero .create-store-emailForm {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
   padding: 40px 0;
+}
+section.hero.footer .create-store-emailForm {
+  padding: 80px 0;
 }
 section.hero .create-store-emailForm .input {
   position: relative;
@@ -1654,7 +1669,6 @@ section.hero .video {
   width: 3em;
   height: 3em;
 }
-
 .testimonial {
   position: relative;
   display: flex;
@@ -1673,6 +1687,31 @@ section.hero .video {
 .testimonial .image {
   max-width: 100px;
 }
+/* -----------------------------------------------
+  Main > Footer
+-------------------------------------------------*/
+footer {
+  position: -webkit-sticky;
+  position: sticky;
+  top: auto;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  padding: 80px 0 0;
+  background-color: #012c3d;
+}
+footer .text-muted {
+  color: #b7b7b7 !important;
+}
+footer .nav-link.text-muted:hover {
+  color: #ffffff !important;
+}
+footer .copyrights {
+  background-color: #00202d;
+  padding: 14px 0;
+}
+
 /* #endregion */
 
 /* #region / Bootstrap 5 - Customization */
@@ -1690,9 +1729,74 @@ section.hero .video {
 /*                                                                   
 /*                                                                    */
 /* -----------------------------------------------
-  Bootstrap > Dropdown
+  Bootstrap > Accordion
 -------------------------------------------------*/
-
+section {
+  background-color: var(--root-bg);
+}
+section[faq] {
+  background-color: #dae3e9;
+}
+.accordion.accordion-border-less {
+}
+.accordion.accordion-border-less .accordion-item {
+  background-color: transparent;
+  border: none;
+}
+.accordion.accordion-border-less .accordion-item:not(:last-child) {
+  box-shadow: inset 0 -1px 0 rgb(0 0 0 / 10%);
+}
+.accordion.accordion-border-less .accordion-button {
+  font-size: 20px;
+  background-color: transparent;
+}
+.accordion.accordion-border-less .accordion-button:not(.collapsed) {
+  color: inherit;
+  font-weight: 600;
+  box-shadow: none;
+}
+.accordion.accordion-border-less .accordion-button::after {
+  width: 2rem;
+  height: 2rem;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yIDhDMiA3LjcyMzg2IDIuMjIzODYgNy41IDIuNSA3LjVIMTMuNUMxMy43NzYxIDcuNSAxNCA3LjcyMzg2IDE0IDhDMTQgOC4yNzYxNCAxMy43NzYxIDguNSAxMy41IDguNUgyLjVDMi4yMjM4NiA4LjUgMiA4LjI3NjE0IDIgOFoiIGZpbGw9IiMxNjE2MTYiLz4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik04IDJDOC4yNzYxNCAyIDguNSAyLjIyMzg2IDguNSAyLjVWMTMuNUM4LjUgMTMuNzc2MSA4LjI3NjE0IDE0IDggMTRDNy43MjM4NiAxNCA3LjUgMTMuNzc2MSA3LjUgMTMuNVYyLjVDNy41IDIuMjIzODYgNy43MjM4NiAyIDggMloiIGZpbGw9IiMxNjE2MTYiLz4KPC9zdmc+Cg==);
+  background-size: 2rem;
+}
+.accordion.accordion-border-less .accordion-button:not(.collapsed):after {
+  transform: rotate(225deg);
+}
+.accordion.accordion-border-less .accordion-button:focus {
+  border: none;
+  box-shadow: none;
+}
+/* -----------------------------------------------
+  Bootstrap > Buttons
+-------------------------------------------------*/
+.btn {
+  border-radius: 500px;
+  padding: 0.75rem 1.5rem;
+}
+.btn-outline {
+  color: #0a4360;
+  border-color: #0a4360;
+}
+.btn-outline:hover {
+  color: #fff;
+  background-color: #0a4360;
+  border-color: #0a4360;
+}
+.btn-check:focus + .btn-outline,
+.btn-outline-dark:focus {
+  box-shadow: 0 0 0 0.25rem rgb(33 37 41 / 50%);
+}
+.btn-check:active + .btn-outline,
+.btn-check:checked + .btn-outline,
+.btn-outline.active,
+.btn-outline.dropdown-toggle.show,
+.btn-outline:active {
+  color: #fff;
+  background-color: #0a4360;
+  border-color: #0a4360;
+}
 /* #endregion */
 
 /* #region / Responsiveness */
