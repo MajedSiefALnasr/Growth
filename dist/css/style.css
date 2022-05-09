@@ -1537,6 +1537,9 @@ section.hero .create-store-emailForm .input span {
 section.hero .video {
   padding-top: 40px;
 }
+section.hero.footer {
+  padding: 120px 0;
+}
 
 /* -----------------------------------------------
   Main > Colored cards
@@ -1737,7 +1740,8 @@ section {
 section[faq] {
   background-color: #dae3e9;
 }
-.accordion.accordion-border-less {
+section[faq] .title.master {
+  -webkit-text-fill-color: #000000;
 }
 .accordion.accordion-border-less .accordion-item {
   background-color: transparent;
