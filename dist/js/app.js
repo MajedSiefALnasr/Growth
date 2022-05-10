@@ -1587,6 +1587,23 @@ var APP = (function () {
     });
   };
 
+  var initScrollTop = function () {
+    const scrollElement = document.querySelector('[data-holol-scroll-top]');
+
+    if (scrollElement) {
+      // scroll to view
+      APPUtil.addEvent(document, 'scroll', function (e) {
+        if (window.scrollY > 200) APPUtil.addClass(scrollElement, 'show');
+        else APPUtil.removeClass(scrollElement, 'show');
+      });
+
+      APPUtil.addEvent(scrollElement, 'click', function (e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+  };
+
   // Public methods
   return {
     init: function () {
@@ -1600,6 +1617,7 @@ var APP = (function () {
       this.initScrollSpy();
       this.initMainNav();
       this.initSplide();
+      this.initScrollTop();
     },
 
     initHello: function (provider, version, link) {
@@ -1636,6 +1654,10 @@ var APP = (function () {
 
     initSplide: function () {
       initSplide();
+    },
+
+    initScrollTop: function () {
+      initScrollTop();
     },
   };
 })();
