@@ -1611,6 +1611,26 @@ var APP = (function () {
     });
   };
 
+  var initAnimationOnScroll = function () {
+    const animationOnScroll = document.querySelectorAll('.aos');
+
+    APPUtil.each(animationOnScroll, (el) => {
+      if (!APPUtil.hasClass(el, 'aos-show')) {
+        if (APPUtil.isPartInViewport(el)) APPUtil.addClass(el, 'aos-show');
+
+        window.addEventListener('scroll', viewElement);
+
+        function viewElement() {
+          if (APPUtil.isPartInViewport(el)) {
+            APPUtil.addClass(el, 'aos-show');
+
+            window.removeEventListener('scroll', viewElement);
+          }
+        }
+      }
+    });
+  };
+
   // Public methods
   return {
     init: function () {
@@ -1626,6 +1646,7 @@ var APP = (function () {
       this.initSplide();
       this.initScrollTop();
       this.initLazyLoad();
+      this.initAnimationOnScroll();
     },
 
     initHello: function (provider, version, link) {
@@ -1670,6 +1691,10 @@ var APP = (function () {
 
     initLazyLoad: function () {
       initLazyLoad();
+    },
+
+    initAnimationOnScroll: function () {
+      initAnimationOnScroll();
     },
   };
 })();

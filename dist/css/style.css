@@ -1338,6 +1338,129 @@ img {
 }
 
 /* -----------------------------------------------
+  Main > Animations
+-------------------------------------------------*/
+.aos {
+  opacity: 0;
+}
+body.page-loading .aos.aos-show {
+  animation-play-state: paused;
+}
+body:not(.page-loading) .aos.aos-show {
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+.aos.aos-view-up.aos-show {
+  -webkit-animation-name: viewUp;
+  animation-name: viewUp;
+}
+.aos.aos-view-down.aos-show {
+  -webkit-animation-name: viewDown;
+  animation-name: viewDown;
+}
+.aos.aos-view-left.aos-show {
+  -webkit-animation-name: viewLeft;
+  animation-name: viewLeft;
+}
+.aos.aos-view-right.aos-show {
+  -webkit-animation-name: viewRight;
+  animation-name: viewRight;
+}
+.aos.aos-view-fade-in.aos-show {
+  -webkit-animation-name: viewFadeIn;
+  animation-name: viewFadeIn;
+}
+.aos.aos-view-fade-out.aos-show {
+  -webkit-animation-name: viewFadeOut;
+  animation-name: viewFadeOut;
+}
+@keyframes viewUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes viewDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes viewLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes viewRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes viewFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes viewFadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.aos.aos-delay-0 {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+.aos.aos-delay-1 {
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+.aos.aos-delay-2 {
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+.aos.aos-delay-3 {
+  -webkit-animation-delay: 0.9s;
+  animation-delay: 0.9s;
+}
+.aos.aos-delay-4 {
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+.aos.aos-delay-5 {
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+
+/* -----------------------------------------------
   Main > Buttons
 -------------------------------------------------*/
 .btn.create-store {
