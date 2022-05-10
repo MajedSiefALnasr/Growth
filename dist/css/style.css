@@ -1671,6 +1671,15 @@ section.hero .video {
 section.hero.footer {
   padding: 120px 0 0;
 }
+/* Extra Small devices (mobile phones, less than 768px) */
+@media (max-width: 767.98px) {
+  section.hero .create-store-emailForm {
+    flex-direction: column;
+  }
+  section.hero .create-store-emailForm .btn.create-store {
+    margin-top: 60px;
+  }
+}
 
 /* -----------------------------------------------
   Main > Colored cards
