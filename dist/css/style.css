@@ -1741,6 +1741,43 @@ footer .copyrights {
   background-color: #00202d;
   padding: 14px 0;
 }
+footer .social-links {
+  display: flex;
+  gap: 10px;
+}
+footer .social-links > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  width: 42px;
+  height: 42px;
+  background: #ffffff12;
+  border-radius: 50%;
+  font-size: 18px;
+  text-decoration: none;
+  transition: all 0.3s ease-out;
+}
+footer .social-links > *:hover {
+  background: #ffffff;
+  color: #000000;
+}
+footer .language-switcher .dropdown-toggle:after {
+  content: none;
+}
+footer .language-switcher .btn.btn-outline {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  color: #b7b7b7;
+  border-color: transparent;
+  background-color: transparent;
+  padding: 0;
+}
+footer .language-switcher .btn.btn-outline:focus {
+  box-shadow: none;
+}
 
 /* #endregion */
 
