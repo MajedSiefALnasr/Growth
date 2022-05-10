@@ -1527,7 +1527,7 @@ body:not(.page-loading) .aos.aos-show {
   border-bottom: 2px solid;
   transition: height 0.35s 0.35s, border-color 0.35s 0.35s, transform 0.35s 0s;
 }
-.menu-toggle-container:hover .menu-toggle {
+.menu-toggle-container .menu-toggle.show {
   border-color: transparent;
   transform: rotate(360deg);
   transition: all 0.35s 0s, transform 0.7s 0s;
@@ -1546,8 +1546,8 @@ body:not(.page-loading) .aos.aos-show {
   transform: translate(0, -50%);
   transition: transform 0.35s;
 }
-.menu-toggle-container:hover .menu-toggle:before,
-.menu-toggle-container:hover .menu-toggle:after {
+.menu-toggle-container .menu-toggle.show:before,
+.menu-toggle-container .menu-toggle.show:after {
   height: 16px;
   transition: height 0.35s 0.35s, transform 0.35s 0.35s;
 }
@@ -1555,7 +1555,7 @@ body:not(.page-loading) .aos.aos-show {
   left: 0;
   border-right: 2px solid;
 }
-.menu-toggle-container:hover .menu-toggle:before {
+.menu-toggle-container .menu-toggle.show:before {
   transform: translate(-3px, -50%) rotate(45deg);
 }
 .menu-toggle-container .menu-toggle:after {
@@ -1563,7 +1563,7 @@ body:not(.page-loading) .aos.aos-show {
   right: 0;
   border-left: 2px solid;
 }
-.menu-toggle-container:hover .menu-toggle:after {
+.menu-toggle-container .menu-toggle.show:after {
   transform: translate(3px, -50%) rotate(-45deg);
 }
 
