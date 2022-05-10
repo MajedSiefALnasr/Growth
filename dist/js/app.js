@@ -23,6 +23,7 @@ window.APPData = {
     HELP_CENTER: '/help-center',
     LOAD_SCRIPT: '',
   },
+  LAZYLOAD_INSTANCE: '',
 };
 
 //            _____  _____    _    _ _   _ _ _ _
@@ -1604,6 +1605,12 @@ var APP = (function () {
     }
   };
 
+  var initLazyLoad = function () {
+    window.APPData.LAZYLOAD_INSTANCE = new LazyLoad({
+      // Your custom settings go here
+    });
+  };
+
   // Public methods
   return {
     init: function () {
@@ -1618,6 +1625,7 @@ var APP = (function () {
       this.initMainNav();
       this.initSplide();
       this.initScrollTop();
+      this.initLazyLoad();
     },
 
     initHello: function (provider, version, link) {
@@ -1659,6 +1667,10 @@ var APP = (function () {
     initScrollTop: function () {
       initScrollTop();
     },
+
+    initLazyLoad: function () {
+      initLazyLoad();
+    },
   };
 })();
 
@@ -1687,6 +1699,7 @@ var APPWidgets = (function () {
 APPUtil.onDOMContentLoaded(() => {
   // App initialize
   APP.init();
+
   // Widgets initialize
   APPWidgets.init();
 });
