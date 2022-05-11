@@ -317,7 +317,7 @@
     <!-- #region / Main Sections -->
     <div class="main-sections">
       <!-- #region / Navbar -->
-      <div class="navbar aos aos-view-down">
+      <div class="navbar">
         <div class="container">
           <div class="d-flex main-navbar">
             <a class="navbar-brand me-auto" href="#">
@@ -427,7 +427,9 @@
                 </defs>
               </svg>
             </a>
+
             <!-- Main navbar -->
+            <div class="overlay"></div>
             <ul class="navbar-nav main">
               <li class="nav-item">
                 <a class="nav-link" href="#">الاكاديمية</a>
@@ -453,33 +455,8 @@
             <button type="button" class="btn create-store">انشئ متجرك</button>
 
             <!-- Main navbar toggler -->
-            <div class="menu-toggle-container dropdown dropstart">
-              <button
-                class="menu-toggle dropdown-toggle"
-                type="button"
-                id="mainNavToggler"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"></button>
-              <ul class="dropdown-menu" aria-labelledby="mainNavToggler">
-                <li>
-                  <a class="dropdown-item" href="#">الاكاديمية</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">الميزات والخدمات</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">الباقات</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">متاجرنا</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">المدونة</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">مركذ المساعدة</a>
-                </li>
-              </ul>
+            <div class="menu-toggle-container">
+              <button class="menu-toggle" type="button" id="mainNavToggler"></button>
             </div>
           </div>
         </div>

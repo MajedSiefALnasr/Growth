@@ -1556,9 +1556,22 @@ var APP = (function () {
   };
 
   var initMainNav = function () {
-    const mainNavToggler = document.querySelector('.toggler-menu.main');
+    const mainNavToggler = document.querySelector('#mainNavToggler');
+    const mainNav = document.querySelector('.navbar .main-navbar > .navbar-nav.main');
+    const mainNavOverlay = document.querySelector('.navbar .main-navbar > .overlay');
+
     APPUtil.addEvent(mainNavToggler, 'click', function (e) {
-      APPUtil.toggleClass(mainNavToggler, 'open');
+      APPUtil.toggleClass(mainNavToggler, 'show');
+      APPUtil.toggleClass(mainNav, 'show');
+      APPUtil.toggleClass(mainNavOverlay, 'show');
+      APPUtil.toggleClass(document.body, 'overflow-hidden');
+    });
+
+    APPUtil.addEvent(mainNavOverlay, 'click', function (e) {
+      APPUtil.toggleClass(mainNavToggler, 'show');
+      APPUtil.toggleClass(mainNav, 'show');
+      APPUtil.toggleClass(mainNavOverlay, 'show');
+      APPUtil.toggleClass(document.body, 'overflow-hidden');
     });
   };
 
