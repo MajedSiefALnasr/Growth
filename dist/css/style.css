@@ -1514,7 +1514,7 @@ body:not(.page-loading) .aos.aos-show {
 }
 .menu-toggle-container .menu-toggle {
   position: relative;
-  display: block;
+  display: none;
   width: 34px;
   height: 24px;
   margin: 0 auto;
@@ -1569,6 +1569,9 @@ body:not(.page-loading) .aos.aos-show {
 
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 991.98px) {
+  .menu-toggle-container .menu-toggle {
+    display: block;
+  }
   .menu-toggle-container {
     display: -webkit-box;
     display: -moz-box;
