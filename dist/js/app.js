@@ -1579,8 +1579,8 @@ var APP = (function () {
           perPage: 3,
           perMove: 1,
           breakpoints: {
-            768: { perPage: 2 },
-            480: { perPage: 1 },
+            992: { perPage: 2 },
+            768: { perPage: 1 },
           },
         });
       else splideEl = new Splide(splide);

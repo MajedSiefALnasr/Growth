@@ -1584,7 +1584,7 @@ body:not(.page-loading) .aos.aos-show {
   Main > Master
 -------------------------------------------------*/
 section {
-  padding: 100px 0;
+  padding: 0 0 150px;
   overflow-x: hidden;
 }
 .title.master {
@@ -1614,6 +1614,19 @@ section {
   width: 150%;
   max-width: unset;
 }
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  .title.master {
+    font-size: 32px;
+  }
+  .sub-title.master, 
+  .sub-title.slave {
+    font-size: 18px;
+  }
+  .title.slave {
+    font-size: 22px;
+  }
+}
 /* Extra Small devices (mobile phones, less than 768px) */
 @media (max-width: 991.98px) {
   .out-view {
@@ -1634,6 +1647,9 @@ section {
 /* -----------------------------------------------
   Main > Hero
 -------------------------------------------------*/
+section.hero {
+  padding: 100px 0 150px;
+}
 section.hero .title.master {
   padding-bottom: 40px;
   font-size: 54px;
@@ -1663,6 +1679,7 @@ section.hero .create-store-emailForm .input input {
   border: none;
   border-bottom: 1px solid #57575736;
   border-radius: 0;
+  text-align: center;
 }
 section.hero .create-store-emailForm .input input:focus {
   border-color: #0a4360;
@@ -1677,7 +1694,7 @@ section.hero .video {
   padding-top: 40px;
 }
 section.hero.footer {
-  padding: 120px 0 0;
+  padding: 0;
 }
 /* Extra Small devices (mobile phones, less than 768px) */
 @media (max-width: 767.98px) {
@@ -1686,6 +1703,12 @@ section.hero.footer {
   }
   section.hero .create-store-emailForm .btn.create-store {
     margin-top: 60px;
+  }
+  section.hero.footer .title.master {
+    font-size: 32px;
+  }
+  section.hero .title.master {
+    font-size: 42px;
   }
 }
 
@@ -1973,7 +1996,7 @@ footer .language-switcher .btn.btn-outline:focus {
   pointer-events: none;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  margin-top: 5rem;
+  margin-top: 40px;
   margin-right: 40px;
   height: 3rem;
   transform: translateY(200px);
@@ -2067,6 +2090,7 @@ section {
   background-color: var(--root-bg);
 }
 section[faq] {
+  padding: 150px 0;
   background-color: #dae3e9;
 }
 section[faq] .title.master {
@@ -2093,6 +2117,7 @@ section[faq] .title.master {
   height: 2rem;
   background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yIDhDMiA3LjcyMzg2IDIuMjIzODYgNy41IDIuNSA3LjVIMTMuNUMxMy43NzYxIDcuNSAxNCA3LjcyMzg2IDE0IDhDMTQgOC4yNzYxNCAxMy43NzYxIDguNSAxMy41IDguNUgyLjVDMi4yMjM4NiA4LjUgMiA4LjI3NjE0IDIgOFoiIGZpbGw9IiMxNjE2MTYiLz4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik04IDJDOC4yNzYxNCAyIDguNSAyLjIyMzg2IDguNSAyLjVWMTMuNUM4LjUgMTMuNzc2MSA4LjI3NjE0IDE0IDggMTRDNy43MjM4NiAxNCA3LjUgMTMuNzc2MSA3LjUgMTMuNVYyLjVDNy41IDIuMjIzODYgNy43MjM4NiAyIDggMloiIGZpbGw9IiMxNjE2MTYiLz4KPC9zdmc+Cg==);
   background-size: 2rem;
+  margin-right: 40px;
 }
 .accordion.accordion-border-less .accordion-button:not(.collapsed):after {
   transform: rotate(225deg);
